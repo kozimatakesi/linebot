@@ -80,6 +80,11 @@ function doPost(e) {
     return result;
   }
 
+  var messages = [{
+    'type': 'text',
+    'text': message,
+  }];
+
   UrlFetchApp.fetch(url, {
     headers: {
       'Content-Type': 'application/json; charset=UTF-8',
@@ -93,6 +98,10 @@ function doPost(e) {
   });
 
   // 5~10位の送信を行う
+  createMessage(messageList[1]);
+  createMessage(messageList[2]);
+  createMessage(messageList[3]);
+  createMessage(messageList[4]);
   createMessage(messageList[5]);
   createMessage(messageList[6]);
   createMessage(messageList[7]);
